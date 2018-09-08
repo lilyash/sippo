@@ -47,7 +47,7 @@ public class Point2D {
     }
 
     public void print(){
-        System.out.print("x= "+ x);
-        System.out.print("y= "+ y);
+        System.out.println("x = " + x);
+        System.out.println("y = " + y);
     }
 }
