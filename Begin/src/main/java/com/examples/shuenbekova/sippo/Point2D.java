@@ -3,9 +3,9 @@ package com.examples.shuenbekova.sippo;
 import java.util.Objects;
 
 public class Point2D {
-    private int x,y;
+    private double x,y;
 
-    public Point2D(int x, int y) {
+    public Point2D(double x, double y) {
         this.x = x;
         this.y = y;
     }
@@ -15,20 +15,37 @@ public class Point2D {
         this.y = 0;
         }
 
-    public int getX() {
+    public double getX() {
         return x;
     }
 
-    public void setX(int x) {
+    public void setX(double x) {
         this.x = x;
     }
 
-    public int getY() {
+    public double getY() {
         return y;
     }
 
-    public void setY(int y) {
+    public void setY(double y) {
         this.y = y;
+    }
+
+    public void print(){
+        System.out.println("x = " + x);
+        System.out.println("y = " + y);
+    }
+
+    public static double function (double point) {
+        return -Math.exp(-point) * Math.log(point);
+    }
+
+    @Override
+    public String toString() {
+        return "Point2D{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
     }
 
     @Override
@@ -46,8 +63,4 @@ public class Point2D {
         return Objects.hash(x, y);
     }
 
-    public void print(){
-        System.out.println("x = " + x);
-        System.out.println("y = " + y);
-    }
 }
