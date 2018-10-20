@@ -3,17 +3,17 @@ package com.examples.shuenbekova.sippo;
 import java.util.Objects;
 
 public class Point2D {
-    private double x,y;
+    private double x, y;
 
     public Point2D(double x, double y) {
         this.x = x;
         this.y = y;
     }
 
-    public Point2D(){
+    public Point2D() {
         this.x = 0;
         this.y = 0;
-        }
+    }
 
     public double getX() {
         return x;
@@ -31,13 +31,8 @@ public class Point2D {
         this.y = y;
     }
 
-    public void print(){
-        System.out.println("x = " + x);
-        System.out.println("y = " + y);
-    }
-
-    public static double function (double point) {
-        return -Math.exp(-point) * Math.log(point);
+    public static double function(double point) {
+        return 2 *(point * point) - Math.exp(point);
     }
 
     @Override
@@ -62,5 +57,4 @@ public class Point2D {
 
         return Objects.hash(x, y);
     }
-
 }
